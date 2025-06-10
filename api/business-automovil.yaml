@@ -11,7 +11,7 @@ externalDocs:
   url: 'https://XXXXX.com'
   description: Más información
 paths:
-  /auto-items:
+  /auto-items/{modeloId}:
     get:
       summary: Listar automóviles DDDD
       description: Devuelve un arreglo de automóviles respetando `minItems` y `maxItems` CCCC.
@@ -55,10 +55,16 @@ paths:
           required: false
           schema:
             type: string
-            example: Corolla BBBB   
+            example: Corolla BBBB
+        - name: modeloId
+          in: path
+          description: Filtrar resultados por el modelo del automóvil CCC
+          schema:
+            type: string
+            example: Corolla BBBB       
       responses:
         '200':
-          description: Lista de automóviles dentro de los límites definidos
+          description: Lista de automóviles dentro de los límites definidos AAAA
           content:
             application/json:
               schema:
@@ -81,7 +87,7 @@ paths:
                 $ref: '#/components/schemas/Error'
 
     post:
-      summary: Crear múltiples automóviles
+      summary: Crear múltiples automóvilesAAA
       description: Recibe un arreglo de vehículos (AutomovilCreate) y devuelve un listado de identificadores y modelos.
       parameters:
         - name: authorization
@@ -107,8 +113,8 @@ paths:
                   description: Debe enviarse entre 1 y 20 automóviles para crear BB
                   items:
                     $ref: '#/components/schemas/AutomovilCreate'
-                  minItems: 14
-                  maxItems: 24
+                  minItems: 15
+                  maxItems: 25
               required:
                 - items
       responses:
