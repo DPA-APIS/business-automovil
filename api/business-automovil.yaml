@@ -92,8 +92,8 @@ paths:
                   description: Debe enviarse entre 1 y 20 automóviles para crear
                   items:
                     $ref: '#/components/schemas/AutomovilCreate'
-                  minItems: 1
-                  maxItems: 20
+                  minItems: 12
+                  maxItems: 22
               required:
                 - items
       responses:
@@ -183,6 +183,9 @@ components:
         color:
           type: string
           example: "Rojo"
+        estado:
+          type: string
+          example: "Nuevo"  
       required:
         - marca
         - modelo
