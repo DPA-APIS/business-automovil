@@ -139,7 +139,7 @@ paths:
             minLength: 43
             maxLength: 43
             pattern: '^[a-z0-9]{32}AAAAAA$'
-            example: 3cfdad6e03c24d0ab7112dce75cdba35AAAA
+            example: 3cfdad6e03c24d0ab7112dce75cdba35BBBB
       requestBody:
         required: true
         content:
