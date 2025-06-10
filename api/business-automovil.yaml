@@ -148,7 +148,7 @@ components:
         id:
           type: string
           format: uuid
-          example: "b7a1f9d2-4f3c-4d6e-9f2a-1e3b4c5d6f7a"
+          example: "b7a1f9d2-4f3c-4d6e-9f2a-1e3b4c5d6f7aaa"
         marca:
           type: string
           example: "Toyota"
