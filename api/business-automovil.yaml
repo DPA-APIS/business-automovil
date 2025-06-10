@@ -103,7 +103,7 @@ paths:
               properties:
                 items:
                   type: array
-                  description: Debe enviarse entre 1 y 20 automóviles para crear
+                  description: Debe enviarse entre 1 y 20 automóviles para crear BB
                   items:
                     $ref: '#/components/schemas/AutomovilCreate'
                   minItems: 12
