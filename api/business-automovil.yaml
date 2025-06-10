@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: API BS Automovil V1
-  version: 1.0.4
+  version: 1.0.5
   description: API de ejemplo donde `/items` lista y crea vehículos (Automovil), y `/automoviles` sigue existiendo para creación individual.
 servers:
   - url: /trade/factoring/v1
