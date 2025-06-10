@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: API BS Automovil V1
-  version: 1.0.2
+  version: 1.0.3
   description: API de ejemplo donde `/items` lista y crea vehículos (Automovil), y `/automoviles` sigue existiendo para creación individual.
 servers:
   - url: /trade/factoring/v1
@@ -13,18 +13,18 @@ externalDocs:
 paths:
   /auto-items:
     get:
-      summary: Listar automóviles AAAA
-      description: Devuelve un arreglo de automóviles respetando `minItems` y `maxItems` AAAAA.
+      summary: Listar automóviles CCCC
+      description: Devuelve un arreglo de automóviles respetando `minItems` y `maxItems` CCCC.
       parameters:
         - name: authorization
           in: header
-          description: Token de autorización
+          description: Token de autorización CCCC
           required: true
           schema:
             type: string
-            minLength: 43
-            maxLength: 43
-            pattern: '^[a-z0-9]{32}BBBBBB'
+            minLength: 44
+            maxLength: 44
+            pattern: '^[a-z0-9]{32}CCCC'
             example: 3cfdad6e03c24d0ab7112dce75cdba35BBBBB
         - name: minItems
           in: query
@@ -51,7 +51,7 @@ paths:
             example: Toyota
         - name: modelo
           in: query
-          description: Filtrar resultados por el modelo del automóvil
+          description: Filtrar resultados por el modelo del automóvil CCC
           required: false
           schema:
             type: string
@@ -171,7 +171,7 @@ components:
           example: "Corolla"
         año:
           type: integer
-          example: 2022
+          example: 202255555
         color:
           type: string
           example: "Rojo"
@@ -194,9 +194,10 @@ components:
         año:
           type: integer
           example: 2022
+          pattern: '^(19|20)\d{2}$'
         color:
           type: string
-          example: "Rojo"
+          example: "Amarillo"
         estado:
           type: string
           example: "Nuevo"  
