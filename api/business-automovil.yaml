@@ -42,6 +42,20 @@ paths:
             type: integer
             minimum: 1
             default: 10
+        - name: marca
+          in: query
+          description: Filtrar resultados por la marca del automóvil
+          required: false
+          schema:
+            type: string
+            example: Toyota
+        - name: modelo
+          in: query
+          description: Filtrar resultados por el modelo del automóvil
+          required: false
+          schema:
+            type: string
+            example: Corolla    
       responses:
         '200':
           description: Lista de automóviles dentro de los límites definidos
