@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: API BS Automovil V1
-  version: 1.0.1
+  version: 1.0.2
   description: API de ejemplo donde `/items` lista y crea vehículos (Automovil), y `/automoviles` sigue existiendo para creación individual.
 servers:
   - url: /trade/factoring/v1
@@ -13,8 +13,8 @@ externalDocs:
 paths:
   /auto-items:
     get:
-      summary: Listar automóviles
-      description: Devuelve un arreglo de automóviles respetando `minItems` y `maxItems`.
+      summary: Listar automóviles AAAA
+      description: Devuelve un arreglo de automóviles respetando `minItems` y `maxItems` AAAAA.
       parameters:
         - name: authorization
           in: header
@@ -24,8 +24,8 @@ paths:
             type: string
             minLength: 43
             maxLength: 43
-            pattern: '^[a-z0-9]{32}AAAAAA$'
-            example: 3cfdad6e03c24d0ab7112dce75cdba35AAAA
+            pattern: '^[a-z0-9]{32}BBBBBB'
+            example: 3cfdad6e03c24d0ab7112dce75cdba35BBBBB
         - name: minItems
           in: query
           description: Número mínimo de automóviles a devolver (por defecto 1)
@@ -55,7 +55,7 @@ paths:
           required: false
           schema:
             type: string
-            example: Corolla    
+            example: Corolla BBBB   
       responses:
         '200':
           description: Lista de automóviles dentro de los límites definidos
@@ -90,8 +90,8 @@ paths:
           required: true
           schema:
             type: string
-            minLength: 43
-            maxLength: 43
+            minLength: 44
+            maxLength: 44
             pattern: '^[a-z0-9]{32}AAAAAA$'
             example: 3cfdad6e03c24d0ab7112dce75cdba35AAAA
       requestBody:
