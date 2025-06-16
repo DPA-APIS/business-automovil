@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: API BS Automovil V1
-  version: 1.0.4
+  version: 1.0.5
   description: API de ejemplo donde `/items` lista y crea vehículos (Automovil), y `/automoviles` sigue existiendo para creación individual.
 servers:
   - url: /trade/factoring/v1
@@ -70,7 +70,7 @@ paths:
                     items:
                       $ref: '#/components/schemas/Automovil'
                     minItems: 2
-                    maxItems: 51
+                    maxItems: 53
                 required:
                   - items
         '400':
@@ -107,8 +107,8 @@ paths:
                   description: Debe enviarse entre 1 y 20 automóviles para crear BB
                   items:
                     $ref: '#/components/schemas/AutomovilCreate'
-                  minItems: 14
-                  maxItems: 24
+                  minItems: 13
+                  maxItems: 25
               required:
                 - items
       responses:
@@ -215,9 +215,12 @@ components:
           type: string
           format: uuid
           example: "b7a1f9d2-4f3c-4d6e-9f2a-1e3b4c5d6f7aDDDD"
-        modelo:
+        modeloTRES:
           type: string
           example: "Corolla"
+        modeloDos:
+          type: string
+          example: "Corolla"  
       required:
         - id
         - modelo
