@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: API BS Automovil V1
-  version: 1.0.5
+  version: 1.0.6
   description: API de ejemplo donde `/items` lista y crea vehículos (Automovil), y `/automoviles` sigue existiendo para creación individual.
 servers:
   - url: /trade/factoring/v1
@@ -13,12 +13,12 @@ externalDocs:
 paths:
   /auto-items/{modeloId}:
     get:
-      summary: Listar automóviles DDDD
+      summary: Listar automóviles AAAAA
       description: Devuelve un arreglo de automóviles respetando `minItems` y `maxItems` CCCC.
       parameters:
         - name: authorization
           in: header
-          description: Token de autorización DDDD
+          description: Token de autorización AAAAA
           required: true
           schema:
             type: string
@@ -87,7 +87,7 @@ paths:
                 $ref: '#/components/schemas/Error'
 
     post:
-      summary: Crear múltiples automóvilesAAA
+      summary: Crear múltiples Áutomóviles AAAAAAA
       description: Recibe un arreglo de vehículos (AutomovilCreate) y devuelve un listado de identificadores y modelos.
       parameters:
         - name: authorization
@@ -221,9 +221,12 @@ components:
           type: string
           format: uuid
           example: "b7a1f9d2-4f3c-4d6e-9f2a-1e3b4c5d6f7aDDDD"
-        modelo:
+        modelotres:
           type: string
           example: "Corolla"
+        modelodos:
+          type: string
+          example: "Corolla"  
       required:
         - id
         - modelo
