@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: API BS Automovil V1
-  version: 1.0.6
+  version: 1.0.5
   description: API de ejemplo donde `/items` lista y crea vehículos (Automovil), y `/automoviles` sigue existiendo para creación individual.
 servers:
   - url: /trade/factoring/v1
@@ -11,14 +11,14 @@ externalDocs:
   url: 'https://XXXXX.com'
   description: Más información
 paths:
-  /auto-items/{modeloId}:
+  /auto-items:
     get:
-      summary: Listar automóviles AAAAA
+      summary: Listar automóviles DDDD
       description: Devuelve un arreglo de automóviles respetando `minItems` y `maxItems` CCCC.
       parameters:
         - name: authorization
           in: header
-          description: Token de autorización AAAAA
+          description: Token de autorización DDDD
           required: true
           schema:
             type: string
@@ -55,16 +55,10 @@ paths:
           required: false
           schema:
             type: string
-            example: Corolla BBBB
-        - name: modeloId
-          in: path
-          description: Filtrar resultados por el modelo del automóvil CCC
-          schema:
-            type: string
-            example: Corolla BBBB       
+            example: Corolla BBBB   
       responses:
         '200':
-          description: Lista de automóviles dentro de los límites definidos AAAA
+          description: Lista de automóviles dentro de los límites definidos
           content:
             application/json:
               schema:
@@ -76,7 +70,7 @@ paths:
                     items:
                       $ref: '#/components/schemas/Automovil'
                     minItems: 2
-                    maxItems: 51
+                    maxItems: 53
                 required:
                   - items
         '400':
@@ -87,7 +81,7 @@ paths:
                 $ref: '#/components/schemas/Error'
 
     post:
-      summary: Crear múltiples Áutomóviles AAAAAAA
+      summary: Crear múltiples automóviles
       description: Recibe un arreglo de vehículos (AutomovilCreate) y devuelve un listado de identificadores y modelos.
       parameters:
         - name: authorization
@@ -113,7 +107,7 @@ paths:
                   description: Debe enviarse entre 1 y 20 automóviles para crear BB
                   items:
                     $ref: '#/components/schemas/AutomovilCreate'
-                  minItems: 15
+                  minItems: 13
                   maxItems: 25
               required:
                 - items
@@ -221,10 +215,10 @@ components:
           type: string
           format: uuid
           example: "b7a1f9d2-4f3c-4d6e-9f2a-1e3b4c5d6f7aDDDD"
-        modelotres:
+        modeloTRES:
           type: string
           example: "Corolla"
-        modelodos:
+        modeloDos:
           type: string
           example: "Corolla"  
       required:
