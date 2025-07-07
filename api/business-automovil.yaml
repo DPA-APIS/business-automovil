@@ -178,7 +178,7 @@ components:
           example: "Rojo"
         color2:
           type: string
-          example: "Rojooo"  
+          example: "Rojoooaa"  
       required:
         - id
         - marca
