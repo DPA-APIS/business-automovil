@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: API BS Automovil V1
-  version: 1.0.16
+  version: 1.0.17
   description: API de ejemplo donde `/items` lista y crea vehículos (Automovil), y `/automoviles` sigue existiendo para creación individual.
 servers:
   - url: /trade/factoring/v1
@@ -55,7 +55,7 @@ paths:
           required: false
           schema:
             type: string
-            example: Corolla BBBB   
+            example: Corolla HOLA   
       responses:
         '200':
           description: Lista de automóviles dentro de los jjjj definidos
