@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: API BS Automovil V1
-  version: 1.0.6
+  version: 1.0.7
   description: API de ejemplo donde `/items` lista y crea vehículos (Automovil), y `/automoviles` sigue existiendo para creación individual.
 servers:
   - url: /trade/factoring/v1
@@ -13,7 +13,7 @@ externalDocs:
 paths:
   /auto-items:
     get:
-      summary: Listar automóviles DDDD
+      summary: Listar automóviles DDDDDDDD
       description: Devuelve un arreglo de automóviles respetando `minItems` y `maxItems` CCCC.
       parameters:
         - name: authorization
@@ -178,7 +178,7 @@ components:
           example: "Rojo"
         color2:
           type: string
-          example: "Rojoooaa"  
+          example: "Rojoooaaaa"  
       required:
         - id
         - marca
