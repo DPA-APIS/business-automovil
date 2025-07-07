@@ -13,12 +13,12 @@ externalDocs:
 paths:
   /auto-items:
     get:
-      summary: Listar automóviles hhhh
+      summary: Listar automóviles aaaaaaaaaaa
       description: Devuelve un arreglo de automóviles respetando `minItems` y `maxItems` CCCC.
       parameters:
         - name: authorization
           in: header
-          description: Token de autorización DDDD
+          description: Token de autorización aa
           required: true
           schema:
             type: string
