@@ -13,7 +13,7 @@ externalDocs:
 paths:
   /auto-items:
     get:
-      summary: Listar automóviles HOLA
+      summary: Listar automóviles HOOLLAA
       description: Devuelve un arreglo de automóviles respetando `minItems` y `maxItems` CCCC.
       parameters:
         - name: authorization
