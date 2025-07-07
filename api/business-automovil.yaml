@@ -13,7 +13,7 @@ externalDocs:
 paths:
   /auto-items:
     get:
-      summary: Listar automóviles DDDD
+      summary: Listar automóviles DDDDDDDD
       description: Devuelve un arreglo de automóviles respetando `minItems` y `maxItems` CCCC.
       parameters:
         - name: authorization
@@ -178,7 +178,7 @@ components:
           example: "Rojo"
         color2:
           type: string
-          example: "Rojoooaa"  
+          example: "Rojoooaaaa"  
       required:
         - id
         - marca
